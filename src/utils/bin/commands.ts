@@ -117,26 +117,26 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
+// export const vi = async (args: string[]): Promise<string> => {
+//   return `woah, you still use 'vi'? just try 'vim'.`;
+// };
 
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
+// export const vim = async (args: string[]): Promise<string> => {
+//   return `'vim' is so outdated. how about 'nvim'?`;
+// };
 
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
+// export const nvim = async (args: string[]): Promise<string> => {
+//   return `'nvim'? too fancy. why not 'emacs'?`;
+// };
 
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
+// export const emacs = async (args?: string[]): Promise<string> => {
+//   return `you know what? just use vscode.`;
+// };
 
-export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
-};
+// export const sudo = async (args?: string[]): Promise<string> => {
+//   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
+//   return `Permission denied: with little power comes... no responsibility? `;
+// };
 
 // Banner
 export const banner = (args?: string[]): string => {

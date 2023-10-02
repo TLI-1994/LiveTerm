@@ -1,13 +1,13 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "readmeUrl": "https://raw.githubusercontent.com/TLI-1994/TLI-1994/main/README.md",
   "title": "LiveTerm",
-  "name": "John Doe",
+  "name": "Tianjiao Li",
   "ascii": "liveterm",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "TLI-1994",
+    "linkedin": "tianjiao-li-062145181"
   },
-  "email": "contact@email.com",
+  "email": "tl787@cornell.edu",
   "ps1_hostname": "liveterm",
   "ps1_username": "visitor",
   "repo": "https://github.com/Cveinnt/LiveTerm",
