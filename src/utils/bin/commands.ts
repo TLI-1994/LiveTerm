@@ -141,17 +141,18 @@ export const date = async (args: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+  ████████╗██╗ █████╗ ███╗   ██╗     ██╗██╗ █████╗  ██████╗     ██╗     ██╗
+  ╚══██╔══╝██║██╔══██╗████╗  ██║     ██║██║██╔══██╗██╔═══██╗    ██║     ██║
+     ██║   ██║███████║██╔██╗ ██║     ██║██║███████║██║   ██║    ██║     ██║
+     ██║   ██║██╔══██║██║╚██╗██║██   ██║██║██╔══██║██║   ██║    ██║     ██║
+     ██║   ██║██║  ██║██║ ╚████║╚█████╔╝██║██║  ██║╚██████╔╝    ███████╗██║
+     ╚═╝   ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝     ╚══════╝╚═╝
+  ╔═╗┌─┐┬─┐┌─┐┌─┐┌┐┌┌─┐┬    ╦ ╦┌─┐┌┐ ┌─┐┬┌┬┐┌─┐
+  ╠═╝├┤ ├┬┘└─┐│ ││││├─┤│    ║║║├┤ ├┴┐└─┐│ │ ├┤          Powered by <span style="color:aqua; font-style:italic;"><a href="https://github.com/Cveinnt/LiveTerm" target="_blank" style="text-decoration: underline;">LiveTerm</a></span>
+  ╩  └─┘┴└─└─┘└─┘┘└┘┴ ┴┴─┘  ╚╩╝└─┘└─┘└─┘┴ ┴ └─┘         
 
-Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+Type '<span style="color:tomato;">help</span>' to see the list of available commands.
+Type '<span style="color:tomato;">sumfetch</span>' to display summary.
+Type '<span style="color:tomato;">repo</span>' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;
 };

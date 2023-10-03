@@ -2,15 +2,16 @@
   "readmeUrl": "https://raw.githubusercontent.com/TLI-1994/TLI-1994/main/README.md",
   "title": "LiveTerm",
   "name": "Tianjiao Li",
-  "ascii": "liveterm",
+  "ascii": "custom",
   "social": {
     "github": "TLI-1994",
-    "linkedin": "tianjiao-li-062145181"
+    "linkedin": "tianjiao-li-062145181",
+    "googleScholar": "citations?user=XXEk38YAAAAJ&hl=en"
   },
   "email": "tl787@cornell.edu",
   "ps1_hostname": "liveterm",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
+  "repo": "https://github.com/TLI-1994/LiveTerm",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
