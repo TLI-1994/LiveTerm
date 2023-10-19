@@ -1,62 +1,63 @@
 import config from '../../../config.json';
+import { concatenateHorizontally } from '../concatenateHorizontally';
 
 const sumfetch = (args?: string[]): string => {
+  let info = `
+ sumfetch
+-----------
+
+ ABOUT
+ ${config.name}
+ <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+爵 <u><a href="${config.repo}" target="_blank">GitHub repo</a></u>
+
+-----------
+
+ CONTACT 
+ <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+ <u><a href="https://github.com/${config.social.github}" target="_blank">GitHub</a></u>
+ <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">LinkedIn</a></u>
+ <u><a href="https://scholar.google.com/${config.social.googleScholar}" target="_blank">Google Scholar</a></u>
+`;
   if (config.ascii === 'cveinnt') {
-    return `                                                  
-             @@@@@@@@@@@@@                   sumfetch: summary display
-        @@@@               @@@@             -----------
-      @@                       @@            ABOUT
-    @@                           @@          ${config.name}
-  @@                               @@       ﰩ ${config.ps1_hostname}
- @@                         @@@     @@       <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-@@        @@@                        @@     爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-@@                                   @@     -----------
-@@             .@@@@@@@@@@.          @@      CONTACT 
- @@           @@          @@        @@       <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-  @@           @@        @@        @@        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   @@             @@@@@@          @@         <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
-     @@@                        @@@         -----------
-        @@@                  @@@ @@          DONATE 
-         @|  @@@@@@@@@@@@@@@@   @@           <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-         @|                      @@          <u><a href="${config.donate_urls.patreon}" target="_blank">${config.donate_urls.patreon}</a></u>
-
-`;
   } else if (config.ascii === 'liveterm') {
-    return `
-           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  sumfetch
-        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
-      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
-    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ${config.name}
-   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-▐▓                                 ▐▓       -----------
-▐▓        > L I V E T E R M        ▐▓        CONTACT 
-▐▓                                 ▐▓        <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓           <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
-    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
-      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀             DONATE 
-        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀                <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                   <u><a href="${config.donate_urls.patreon}" target="_blank">${config.donate_urls.patreon}</a></u>
+    let asciiArt = `
+           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄ 
+        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄ 
+      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄ 
+    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 
+   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓ 
+▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓
+▐▓                                 ▐▓
+▐▓        > L I V E T E R M        ▐▓
+▐▓                                 ▐▓
+▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓
+   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓ 
+    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 
+      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀ 
+        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀ 
+            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀ 
 
 `;
+    return concatenateHorizontally(asciiArt, info, 50);
   } else {
-    return `
-         ███████████                 sumfetch
-     ▓██████████▒   ███▓            -----------
-  ▒▒█▒   ███████▒      ▒█▒▒  
-  █▓  ▒▓█▓▓▓▓▓▓▓██▒▒     ▓█          ABOUT
-▒▓██▒▓█▓▒       ▒▒██▒▒▒▒▒▓█▓▒        ${config.name}
-███████▒          ▓██▓▒▒▒▓███        <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-██▒▒███▒          ▓█▒▒    ▒██       爵 <u><a href="${config.repo}" target="_blank">GitHub repo</a></u>
-██  ▒▓█▓▓       ▒▓██       ██       -----------
-██   ▒███▓▓▓▓▓▓▓████▓▓   ▒▓██
-██ ▒█████████████████████████        CONTACT 
-  █████▓▒▒▒██▒▒▒██▒▒▒▓█████          <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-   ▒█▓▒▒▒▒▒██▒▒▒██▒▒▒▒▒▓█▒           <u><a href="https://github.com/${config.social.github}" target="_blank">GitHub</a></u>
-    ▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒           <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">LinkedIn</a></u>
-     ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒             <u><a href="https://scholar.google.com/${config.social.googleScholar}" target="_blank">Google Scholar</a></u>
+    let asciiArt = `
+             ███████████         
+         ▓██████████▒   ███▓     
+      ▒▒█▒   ███████▒      ▒█▒▒  
+      █▓  ▒▓█▓▓▓▓▓▓▓██▒▒     ▓█  
+    ▒▓██▒▓█▓▒       ▒▒██▒▒▒▒▒▓█▓▒
+    ███████▒          ▓██▓▒▒▒▓███
+    ██▒▒███▒          ▓█▒▒    ▒██
+    ██  ▒▓█▓▓       ▒▓██       ██
+    ██   ▒███▓▓▓▓▓▓▓████▓▓   ▒▓██
+    ██ ▒█████████████████████████
+      █████▓▒▒▒██▒▒▒██▒▒▒▓█████  
+       ▒█▓▒▒▒▒▒██▒▒▒██▒▒▒▒▒▓█▒   
+        ▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒   
+         ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒     
 `;
+    return concatenateHorizontally(asciiArt, info, 50);
   }
 };
 
