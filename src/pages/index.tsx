@@ -24,9 +24,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
 
   const init = React.useCallback(() => {
     let msg = `
-    Type '<span style="color:tomato;">help</span>' to see the list of available commands.
-    Type '<span style="color:tomato;">sumfetch</span>' to display summary.
-    Type '<span style="color:tomato;">repo</span>' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the GitHub repository.`;
+  Type '<span style="color:tomato;">help</span>' to see the list of available commands.
+  Type '<span style="color:tomato;">sumfetch</span>' to display summary.
+  Type '<span style="color:tomato;">repo</span>' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the GitHub repository.`;
 
     let sep = '+' + '-'.repeat(75) + '+' + '\n';
 

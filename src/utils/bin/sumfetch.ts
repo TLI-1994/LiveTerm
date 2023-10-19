@@ -56,7 +56,7 @@ const sumfetch = (args?: string[]): string => {
         ▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒   
          ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒     
 `;
-    return concatenateHorizontally(asciiArt, info, 50, 100) + `\n`;
+    return concatenateHorizontally(asciiArt, info, 50, 25) + `\n`;
   }
 };
 
