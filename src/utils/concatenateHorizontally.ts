@@ -1,4 +1,4 @@
-export function concatenateHorizontally(first: string, second: string, width: number): string {
+export function concatenateHorizontally(first: string, second: string, width1: number, width2: number): string {
     // Split the strings into lines
     const firstLines = first.split('\n');
     const secondLines = second.split('\n');
@@ -23,8 +23,8 @@ export function concatenateHorizontally(first: string, second: string, width: nu
         const firstLine = firstLines[i - firstStartIndex] || '';
         const secondLine = secondLines[i - secondStartIndex] || '';
 
-        // Pad the first line to the desired width and then concatenate the second line
-        const combinedLine = firstLine.padEnd(width, ' ') + secondLine;
+        // Pad the first line to the desired width1 and the second line to width2, then concatenate
+        const combinedLine = firstLine.padEnd(width1, ' ') + secondLine.padEnd(width2, ' ');
 
         result.push(combinedLine);
     }
@@ -36,10 +36,10 @@ export function concatenateHorizontally(first: string, second: string, width: nu
 // Example usage:
 // const str1 = "one\ntwo\nthree\nfour\nfive";
 // const str2 = "A\nB\nC";
-// console.log(concatenateHorizontally(str1, str2, 10));
+// console.log(concatenateHorizontally(str1, str2, 10, 5));
 // Expected output:
-// one      
-// two      A
-// three    B
-// four     C
-// five
+// one         A    
+// two         B    
+// three       C    
+// four              
+// five              

@@ -4,7 +4,7 @@ import config from '../../config.json';
 import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import { banner, sumfetch } from '../utils/bin';
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -22,7 +22,17 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     setLastCommandIndex,
   } = useHistory([]);
 
-  const init = React.useCallback(() => setHistory(banner()), []);
+  const init = React.useCallback(() => {
+    let msg = `
+    Type '<span style="color:tomato;">help</span>' to see the list of available commands.
+    Type '<span style="color:tomato;">sumfetch</span>' to display summary.
+    Type '<span style="color:tomato;">repo</span>' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the GitHub repository.`;
+
+    let sep = '+' + '-'.repeat(75) + '+' + '\n';
+
+    setHistory(banner() + sep + sumfetch() + sep + msg);
+  }, []);
+
 
   React.useEffect(() => {
     init();

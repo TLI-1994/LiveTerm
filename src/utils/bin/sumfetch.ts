@@ -10,7 +10,6 @@ const sumfetch = (args?: string[]): string => {
  ${config.name}
  <u><a href="${config.resume_url}" target="_blank">resume</a></u>
 爵 <u><a href="${config.repo}" target="_blank">GitHub repo</a></u>
-
 -----------
 
  CONTACT 
@@ -39,7 +38,7 @@ const sumfetch = (args?: string[]): string => {
             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀ 
 
 `;
-    return concatenateHorizontally(asciiArt, info, 50);
+    return concatenateHorizontally(asciiArt, info, 50, 25) + `\n`;
   } else {
     let asciiArt = `
              ███████████         
@@ -57,7 +56,7 @@ const sumfetch = (args?: string[]): string => {
         ▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒   
          ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒     
 `;
-    return concatenateHorizontally(asciiArt, info, 50);
+    return concatenateHorizontally(asciiArt, info, 50, 100) + `\n`;
   }
 };
 
