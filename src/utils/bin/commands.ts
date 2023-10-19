@@ -65,18 +65,22 @@ export const linkedin = async (args: string[]): Promise<string> => {
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
+echo.doc = "Echoes the given arguments.";
 
 export const whoami = async (args: string[]): Promise<string> => {
   return `${config.ps1_username}`;
 };
+whoami.doc = "Returns the current user's name.";
 
 export const ls = async (args: string[]): Promise<string> => {
   return `ls command is yet to be implemented...`;
 };
+ls.doc = "Lists information about files and directories."
 
 export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
+date.doc = "Prints the system date and time."
 
 // Banner
 export const banner = (args?: string[]): string => {
