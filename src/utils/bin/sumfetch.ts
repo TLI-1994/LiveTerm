@@ -1,6 +1,6 @@
 import config from '../../../config.json';
 
-const sumfetch = async (args: string[]): Promise<string> => {
+const sumfetch = (args?: string[]): string => {
   if (config.ascii === 'cveinnt') {
     return `                                                  
              @@@@@@@@@@@@@                   sumfetch: summary display
@@ -52,8 +52,8 @@ const sumfetch = async (args: string[]): Promise<string> => {
 ██  ▒▓█▓▓       ▒▓██       ██       -----------
 ██   ▒███▓▓▓▓▓▓▓████▓▓   ▒▓██
 ██ ▒█████████████████████████        CONTACT 
-  █████▓▒▒▒██▒▒▒██▓▒▒▓█████          <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-   ▒█▓▒▒▒▒▒██▒▒▒▓█▓▒▒▒▒▓█▒           <u><a href="https://github.com/${config.social.github}" target="_blank">GitHub</a></u>
+  █████▓▒▒▒██▒▒▒██▒▒▒▓█████          <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+   ▒█▓▒▒▒▒▒██▒▒▒██▒▒▒▒▒▓█▒           <u><a href="https://github.com/${config.social.github}" target="_blank">GitHub</a></u>
     ▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▒           <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">LinkedIn</a></u>
      ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒             <u><a href="https://scholar.google.com/${config.social.googleScholar}" target="_blank">Google Scholar</a></u>
 `;
